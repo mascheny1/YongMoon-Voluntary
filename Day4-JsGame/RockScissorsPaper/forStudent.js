@@ -106,7 +106,7 @@ const changeIMG = (answer) => { // randomNumber로부터 정해진 answer, 즉 �
 };
 
 const randomNumber = (n,m) => {
-    let rand = Math.floor(Math.random()*(m-n+1))-n;
+    let rand = Math.floor(Math.random()*(m-n+1))+n;
     return rand;
 };
 
@@ -132,19 +132,5 @@ const judge = (answer, submit) => {
     } else if (answer - submit == -1, 2){
       return "Win";
     }
+
 };
-
-
-
-
-
-
-
-   // 결과를 "Draw", "Lose", "Win" 형태로 도출하여 String의 형태로 return하세요!
-	/*
-     * 가위 = -1, 바위 = 0, 보자기 = 1 입니다.
-     * answer에는 상대편 카드로는 -1, 0, 1 중 하나의 값이 들어옵니다.
-     * submit에는 자신이 선택한 카드에 따라 -1, 0, 1 중 하나의 값이 들어옵니다.
-     * answser와 submit의 값을 비교하여 자신이 비겼는지, 졌는지, 이겼는지 판단하는 함수를 만드세요!
-     * return 타입은 문자열인 String이며, "Draw", "Lose", "Win" 중 하나로 return되게 하면 됩니다!
-     */
